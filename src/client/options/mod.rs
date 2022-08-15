@@ -680,7 +680,7 @@ impl Serialize for ClientOptions {
 /// Contains the options that can be set via a MongoDB connection string.
 ///
 /// The format of a MongoDB connection string is described [here](https://www.mongodb.com/docs/manual/reference/connection-string/#connection-string-formats).
-#[derive(Debug, Default, PartialEq)]
+#[derive(Debug, Default, PartialEq, Clone)]
 #[non_exhaustive]
 pub struct ConnectionString {
     /// The initial list of seeds that the Client should connect to, or a DNS name used for SRV
